@@ -3,26 +3,37 @@
     margin: auto;
     width: 800px;
     height: 600px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Balloon styling */
+/* Balloons */
 .balloons {
-    width: 60px;
-    height: 80px;
-    background: red;
-    border-radius: 50% 50% 50% 50%;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    width: 60px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50%;
+    background: red;
+    box-shadow: inset -5px -10px rgba(0,0,0,0.2);
 }
 
-/* Ribbon styling */
+/* Add multiple balloon colors */
+.balloons:nth-child(1) { background: red; left: 20%; }
+.balloons:nth-child(2) { background: blue; left: 40%; }
+.balloons:nth-child(3) { background: green; left: 60%; }
+.balloons:nth-child(4) { background: yellow; left: 80%; }
+.balloons:nth-child(5) { background: pink; left: 30%; }
+
+/* Ribbons */
 .ribbons {
-    width: 12px;
-    height: 100px;
-    background: gold;
     position: absolute;
     bottom: 0;
-    left: 60%;
+    left: 50%;
+    width: 12px;
+    height: 100px;
+    background: linear-gradient(to bottom, gold, orange);
+    border-radius: 6px;
+    transform-origin: top center;
 }
