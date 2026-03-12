@@ -5,13 +5,6 @@ $(document).ready(function() {
         height: 600,
         autoCenter: true
     });
-    $("#prev").click(function() {
-    $("#flipbook").turn("previous");
-});
-$("#next").click(function() {
-    $("#flipbook").turn("next");
-});
-
 
     // Animate balloons
     $(".balloons").each(function(index, element) {
@@ -31,5 +24,13 @@ $("#next").click(function() {
         repeat: -1,
         ease: "linear"
     });
-});
 
+    // Auto flip through pages every 3 seconds
+    let page = 1;
+    setInterval(function() {
+        page++;
+        if (page <= $("#flipbook").turn("pages")) {
+            $("#flipbook").turn("page", page);
+        }
+    }, 3000);
+});
