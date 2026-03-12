@@ -6,13 +6,15 @@ $(document).ready(function() {
         autoCenter: true
     });
 
-    // Balloons floating animation
-    gsap.to(".balloons", {
-        y: -400,
-        duration: 5,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut"
+    // Animate each balloon differently
+    $(".balloons").each(function(index, element) {
+        gsap.to(element, {
+            y: -400 - (index * 50), // stagger heights
+            duration: 3 + index,    // different speeds
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
     });
 
     // Ribbons spinning animation
