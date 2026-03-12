@@ -6,18 +6,18 @@ $(document).ready(function() {
         autoCenter: true
     });
 
-    // Animate each balloon differently
+    // Animate balloons
     $(".balloons").each(function(index, element) {
         gsap.to(element, {
-            y: -400 - (index * 50), // stagger heights
-            duration: 3 + index,    // different speeds
+            y: -400,
+            duration: 4 + index,
             repeat: -1,
             yoyo: true,
             ease: "power1.inOut"
         });
     });
 
-    // Ribbons spinning animation
+    // Animate ribbon
     gsap.to(".ribbons", {
         rotation: 360,
         duration: 10,
