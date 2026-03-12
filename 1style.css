@@ -5,28 +5,45 @@
     height: 600px;
     position: relative;
     overflow: hidden;
+    background: #fffbe6;
+    border: 2px solid #ff69b4;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Embossed heading */
+.embossed {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #ff1493;
+    text-shadow: 2px 2px #ffc0cb;
+}
+
+/* Photo */
+.photo {
+    display: block;
+    margin: 40px auto;
+    max-width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 /* Balloons */
 .balloons {
     position: absolute;
     bottom: 0;
-    left: 50%;
     width: 60px;
     height: 80px;
-    border-radius: 50% 50% 50% 50%;
-    background: red;
+    border-radius: 50%;
     box-shadow: inset -5px -10px rgba(0,0,0,0.2);
 }
 
-/* Add multiple balloon colors */
-.balloons:nth-child(1) { background: red; left: 20%; }
-.balloons:nth-child(2) { background: blue; left: 40%; }
-.balloons:nth-child(3) { background: green; left: 60%; }
-.balloons:nth-child(4) { background: yellow; left: 80%; }
-.balloons:nth-child(5) { background: pink; left: 30%; }
+/* Multi-colored balloons */
+.balloons:nth-child(1) { background: red; left: 25%; }
+.balloons:nth-child(2) { background: blue; left: 45%; }
+.balloons:nth-child(3) { background: green; left: 65%; }
 
-/* Ribbons */
+/* Ribbon */
 .ribbons {
     position: absolute;
     bottom: 0;
