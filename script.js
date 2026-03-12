@@ -1,35 +1,25 @@
-// Initialize flipbook
-document.addEventListener("DOMContentLoaded", () => {
-  $("#flipbook").turn({
-    width: 600,
-    height: 400,
-    autoCenter: true
-  });
-
-  // Balloons animation
-  for (let i = 0; i < 10; i++) {
-    let balloon = document.createElement("div");
-    balloon.className = "balloon";
-    document.querySelector(".balloons").appendChild(balloon);
-    gsap.to(balloon, {
-      y: -400,
-      x: Math.random() * 200 - 100,
-      duration: 5 + Math.random() * 3,
-      repeat: -1,
-      ease: "power1.inOut"
+$(document).ready(function() {
+    // Initialize flipbook
+    $("#flipbook").turn({
+        width: 800,
+        height: 600,
+        autoCenter: true
     });
-  }
 
-  // Ribbons animation
-  for (let i = 0; i < 5; i++) {
-    let ribbon = document.createElement("div");
-    ribbon.className = "ribbon";
-    document.querySelector(".ribbons").appendChild(ribbon);
-    gsap.to(ribbon, {
-      rotation: 360,
-      duration: 6,
-      repeat: -1,
-      ease: "linear"
+    // Balloons floating animation
+    gsap.to(".balloons", {
+        y: -400,
+        duration: 5,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut"
     });
-  }
+
+    // Ribbons spinning animation
+    gsap.to(".ribbons", {
+        rotation: 360,
+        duration: 10,
+        repeat: -1,
+        ease: "linear"
+    });
 });
