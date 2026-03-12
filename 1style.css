@@ -49,10 +49,6 @@
     box-shadow: inset -5px -10px rgba(0,0,0,0.2);
 }
 
-/* Multi-colored balloons */
-.balloons:nth-child(1) { background: red; left: 25%; }
-.balloons:nth-child(2) { background: blue; left: 45%; }
-.balloons:nth-child(3) { background: green; left: 65%; }
 
 /* Ribbon */
 .ribbons {
@@ -65,4 +61,17 @@
     border-radius: 6px;
     transform-origin: top center;
 }
+/* Each page in the flipbook */
+.page {
+    width: 400px;   /* half of flipbook width */
+    height: 600px;  /* same as flipbook height */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 
