@@ -1,0 +1,40 @@
+body {
+  background: #fdf6f0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#flipbook {
+  width: 600px;
+  height: 400px;
+}
+
+.page {
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.cover {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.embossed {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 5px #d46a6a;
+}
+
+.photo {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.message h2 {
+  color: #ff4081;
+}
