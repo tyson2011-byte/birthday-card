@@ -1,14 +1,25 @@
-/* Flipbook container */
+/* Flipbook container with confetti background */
 #flipbook {
     margin: auto;
     width: 800px;
     height: 600px;
     position: relative;
     overflow: hidden;
-    background: #fffbe6;
+    background: repeating-linear-gradient(
+        45deg,
+        #fffbe6,
+        #fffbe6 40px,
+        #ffcccc 40px,
+        #ffcccc 80px,
+        #ccffcc 80px,
+        #ccffcc 120px,
+        #ccccff 120px,
+        #ccccff 160px
+    );
     border: 2px solid #ff69b4;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
+
 
 /* Embossed heading */
 .embossed {
@@ -54,3 +65,4 @@
     border-radius: 6px;
     transform-origin: top center;
 }
+
